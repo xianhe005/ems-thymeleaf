@@ -1,0 +1,122 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Insert title here</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<div id="wrap">
+    <div id="top_content">
+        <div id="header">
+            <div id="rightheader">
+                <p>
+                    2009/11/16
+                    <br/>
+                    <a th:if="${session.user != null}" th:href="@{/user/logout}">安全退出</a>
+                    <a th:if="${session.user == null}" th:href="@{/login}">点我登录</a>
+                </p>
+            </div>
+            <div id="topheader">
+                <h3 id="title">
+                    <a href="#">main</a>
+                </h3>
+            </div>
+            <div id="navigation"></div>
+        </div>
+        <div id="content">
+            <p id="whereami"></p>
+            <h3>
+                Welcome <span th:if="${session.user != null}" th:text="${session.user.realname}"></span>
+                <span th:if="${session.user == null}">游客</span>
+            </h3>
+            <table class="table" border="1" cellpadding="0" cellspacing="0">
+                <tr class="table_header">
+                    <td>
+                        ID
+                    </td>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Photo
+                    </td>
+                    <td>
+                        Salary
+                    </td>
+                    <td>
+                        Birthday
+                    </td>
+                    <td th:hidden="${session.user == null}">
+                        Operation
+                    </td>
+                </tr>
+
+                <tr th:class="${state.odd ? 'row1' : 'row2'}" th:each="employee, state:${employees}">
+                    <td>
+                        <span th:text="${employee.id}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${employee.name}"></span>
+                    </td>
+                    <td>
+                        <img th:src="@{/} + ${employee.photo}" width="60" th:title="@{/} + ${employee.photo}">
+                    </td>
+                    <td>
+                        <span th:text="${employee.salary}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${#dates.format(employee.birthday, 'yyyy/MM/dd')}"></span>
+                    </td>
+                    <td th:hidden="${session.user == null}">
+                        <a href="javascript:;" th:onclick="deleteEmployee([[${employee.id}]], [[${employee.photo}]])">删除</a>
+                        <script>
+                            function deleteEmployee(id, photo) {
+                                if (window.confirm('确定要删除这条记录吗？')) {
+                                    location.href = '[[@{/employee/delete}]]?id=' + id +'&photo=' + photo;
+                                }
+                            }
+                        </script>
+                        &nbsp;
+                        <!--<a th:href="@{/employee/detail?id=} + ${employee.id} + '&name=' + ${employee.name}">更新</a>-->
+                        <!--<a th:href="@{/employee/detail(id=${employee.id},photo=${employee.photo})}">更新</a>-->
+                        <a th:href="@{/employee/detail(id=${employee.id})}">更新</a>
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                <input type="button" class="button" value="添加员工信息" onclick="addEmp()"/>
+                <script>
+                    function addEmp() {
+                        location.href = '[[@{/addEmp}]]';
+                    }
+                </script>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+
+<style>
+    .table {
+        width: 100%;
+    }
+
+    .td {
+        width: 10%;
+    }
+
+    .table_header {
+        background-color: gray;
+        color: blue;
+    }
+
+    .row1 {
+        background-color: white;
+    }
+
+    .row2 {
+        background-color: rgb(209, 207, 207);
+    }
+</style>
+</html>

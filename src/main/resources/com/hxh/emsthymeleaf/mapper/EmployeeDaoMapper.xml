@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hxh.emsthymeleaf.dao.EmployeeDao">
+
+    <select id="list" resultType="Employee">
+        select id, name, photo, salary, birthday from `employee`
+    </select>
+
+    <insert id="add" parameterType="Employee">
+        INSERT INTO `employee` VALUES( #{id}, #{name}, #{salary}, #{birthday}, #{photo})
+    </insert>
+
+    <select id="idByEmployee" resultType="Employee">
+        select id, name, birthday, salary, photo from `employee` where id = #{id}
+    </select>
+
+    <update id="update" parameterType="Employee">
+        UPDATE `employee`
+        SET
+        `name` = #{name},
+        `birthday` = #{birthday},
+        `salary` = #{salary},
+        `photo` = #{photo}
+        WHERE `id` = #{id};
+    </update>
+
+    <delete id="delete" parameterType="Integer">
+        DELETE
+        FROM
+        `employee`
+        WHERE `id` = #{id};
+    </delete>
+</mapper>

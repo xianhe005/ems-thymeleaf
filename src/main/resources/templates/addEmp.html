@@ -1,0 +1,61 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>添加员工信息</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<h3>添加员工信息：[[${param.msg}]]</h3>
+<form th:action="@{/employee/add}" method="POST" enctype="multipart/form-data">
+
+    <table>
+
+        <tr>
+            <td valign="middle" align="right">
+                姓名：
+            </td>
+            <td valign="middle" align="left">
+                <input type="text" class="inputgri" name="name">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="middle" align="right">
+                头像：
+            </td>
+            <td valign="middle" align="left">
+                <input type="file" class="inputgri" name="img" width="">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="middle" align="right">
+                工资：
+            </td>
+            <td valign="middle" align="left">
+                <input type="text" class="inputgri" name="salary">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="middle" align="right">
+                生日：
+            </td>
+            <td valign="middle" align="left">
+                <input type="text" class="inputgri" name="birthday">
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        <input type="submit" class="button" value="确认添加"/>&nbsp;<input type="button" class="button" value="返回列表" onclick="toList()"/>
+
+        <script>
+            function toList() {
+                location.href = '[[@{/employee/list}]]';
+            }
+        </script>
+    </p>
+</form>
+</body>
+</html>

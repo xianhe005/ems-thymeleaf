@@ -1,0 +1,97 @@
+2021-08-10 09:51:37.634  INFO 11804 --- [restartedMain] c.h.e.EmsThymeleafApplication            : Starting EmsThymeleafApplication using Java 1.8.0_191 on DESKTOP-9S2DH3B with PID 11804 (C:\Users\hxsz\IdeaProjects\ems-thymeleaf\target\classes started by hxsz in C:\Users\hxsz\IdeaProjects\ems-thymeleaf)
+2021-08-10 09:51:37.650 DEBUG 11804 --- [restartedMain] c.h.e.EmsThymeleafApplication            : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-10 09:51:37.650  INFO 11804 --- [restartedMain] c.h.e.EmsThymeleafApplication            : No active profile set, falling back to default profiles: default
+2021-08-10 09:51:37.697  INFO 11804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-10 09:51:37.697  INFO 11804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-10 09:51:39.053  INFO 11804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2021-08-10 09:51:39.069  INFO 11804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 09:51:39.069  INFO 11804 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-10 09:51:39.131  INFO 11804 --- [restartedMain] o.a.c.c.C.[.[.[/ems-thymeleaf]           : Initializing Spring embedded WebApplicationContext
+2021-08-10 09:51:39.131  INFO 11804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1434 ms
+2021-08-10 09:51:39.985  INFO 11804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-10 09:51:40.016  INFO 11804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/ems-thymeleaf'
+2021-08-10 09:51:40.032  INFO 11804 --- [restartedMain] c.h.e.EmsThymeleafApplication            : Started EmsThymeleafApplication in 3.08 seconds (JVM running for 4.372)
+2021-08-10 09:52:06.512  INFO 11804 --- [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/ems-thymeleaf]           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 09:52:06.513  INFO 11804 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 09:52:06.514  INFO 11804 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-10 09:52:16.928 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.controller.UserController          : username:test, password:123456
+2021-08-10 09:52:16.997  INFO 11804 --- [http-nio-9999-exec-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-08-10 09:52:17.614 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 09:52:17.635 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test(String)
+2021-08-10 09:52:17.656 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 09:52:23.831 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.controller.UserController          : username:test, password:123
+2021-08-10 09:52:23.832 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 09:52:23.833 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test(String)
+2021-08-10 09:52:23.834 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 09:52:23.856 DEBUG 11804 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 09:52:23.857 DEBUG 11804 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 09:52:23.859 DEBUG 11804 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 09:52:26.365 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : 17
+2021-08-10 09:52:26.367 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.dao.EmployeeDao.idByEmployee       : ==>  Preparing: select id, name, birthday, salary, photo from `employee` where id = ?
+2021-08-10 09:52:26.368 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.dao.EmployeeDao.idByEmployee       : ==> Parameters: 17(Integer)
+2021-08-10 09:52:26.369 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.dao.EmployeeDao.idByEmployee       : <==      Total: 1
+2021-08-10 09:52:26.370 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : Employee{id=17, name='张三2', salary=122.33, birthday=Sat Dec 01 00:00:00 CST 2012, photo='20210809173402747.jpg'}
+2021-08-10 09:54:16.308 DEBUG 11804 --- [http-nio-9999-exec-6] c.h.e.controller.UserController          : 17
+2021-08-10 09:54:16.317  WARN 11804 --- [http-nio-9999-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/ems-thymeleaf?characterEncoding=UTF-8, version : 1.2.5, lastPacketReceivedIdleMillis : 109940
+2021-08-10 09:54:16.339 DEBUG 11804 --- [http-nio-9999-exec-6] c.h.e.dao.EmployeeDao.idByEmployee       : ==>  Preparing: select id, name, birthday, salary, photo from `employee` where id = ?
+2021-08-10 09:54:16.339 DEBUG 11804 --- [http-nio-9999-exec-6] c.h.e.dao.EmployeeDao.idByEmployee       : ==> Parameters: 17(Integer)
+2021-08-10 09:54:16.342 DEBUG 11804 --- [http-nio-9999-exec-6] c.h.e.dao.EmployeeDao.idByEmployee       : <==      Total: 1
+2021-08-10 09:54:16.343 DEBUG 11804 --- [http-nio-9999-exec-6] c.h.e.controller.UserController          : Employee{id=17, name='张三2', salary=122.33, birthday=Sat Dec 01 00:00:00 CST 2012, photo='20210809173402747.jpg'}
+2021-08-10 09:54:27.158 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : 17
+2021-08-10 09:54:27.159 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.dao.EmployeeDao.idByEmployee       : ==>  Preparing: select id, name, birthday, salary, photo from `employee` where id = ?
+2021-08-10 09:54:27.160 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.dao.EmployeeDao.idByEmployee       : ==> Parameters: 17(Integer)
+2021-08-10 09:54:27.162 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.dao.EmployeeDao.idByEmployee       : <==      Total: 1
+2021-08-10 09:54:27.163 DEBUG 11804 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : Employee{id=17, name='张三2', salary=122.33, birthday=Sat Dec 01 00:00:00 CST 2012, photo='20210809173402747.jpg'}
+2021-08-10 09:54:56.211 DEBUG 11804 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 09:54:56.212 DEBUG 11804 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 09:54:56.213 DEBUG 11804 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 09:55:29.245 DEBUG 11804 --- [http-nio-9999-exec-9] c.h.e.controller.UserController          : 17
+2021-08-10 09:55:29.246 DEBUG 11804 --- [http-nio-9999-exec-9] c.h.e.dao.EmployeeDao.idByEmployee       : ==>  Preparing: select id, name, birthday, salary, photo from `employee` where id = ?
+2021-08-10 09:55:29.246 DEBUG 11804 --- [http-nio-9999-exec-9] c.h.e.dao.EmployeeDao.idByEmployee       : ==> Parameters: 17(Integer)
+2021-08-10 09:55:29.248 DEBUG 11804 --- [http-nio-9999-exec-9] c.h.e.dao.EmployeeDao.idByEmployee       : <==      Total: 1
+2021-08-10 09:55:29.249 DEBUG 11804 --- [http-nio-9999-exec-9] c.h.e.controller.UserController          : Employee{id=17, name='张三2', salary=122.33, birthday=Sat Dec 01 00:00:00 CST 2012, photo='20210809173402747.jpg'}
+2021-08-10 09:55:31.242 DEBUG 11804 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 09:55:31.242 DEBUG 11804 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 09:55:31.243 DEBUG 11804 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 09:55:33.176 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.controller.UserController          : 17
+2021-08-10 09:55:33.177 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.dao.EmployeeDao.idByEmployee       : ==>  Preparing: select id, name, birthday, salary, photo from `employee` where id = ?
+2021-08-10 09:55:33.177 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.dao.EmployeeDao.idByEmployee       : ==> Parameters: 17(Integer)
+2021-08-10 09:55:33.178 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.dao.EmployeeDao.idByEmployee       : <==      Total: 1
+2021-08-10 09:55:33.179 DEBUG 11804 --- [http-nio-9999-exec-4] c.h.e.controller.UserController          : Employee{id=17, name='张三2', salary=122.33, birthday=Sat Dec 01 00:00:00 CST 2012, photo='20210809173402747.jpg'}
+2021-08-10 09:55:34.545 DEBUG 11804 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 09:55:34.546 DEBUG 11804 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 09:55:34.547 DEBUG 11804 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 09:58:13.080  WARN 11804 --- [http-nio-9999-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/ems-thymeleaf?characterEncoding=UTF-8, version : 1.2.5, lastPacketReceivedIdleMillis : 158532
+2021-08-10 09:58:13.100 DEBUG 11804 --- [http-nio-9999-exec-9] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 09:58:13.100 DEBUG 11804 --- [http-nio-9999-exec-9] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 09:58:13.101 DEBUG 11804 --- [http-nio-9999-exec-9] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 09:58:16.581 DEBUG 11804 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 09:58:16.581 DEBUG 11804 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 09:58:16.583 DEBUG 11804 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 09:58:19.072 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.controller.UserController          : 17
+2021-08-10 09:58:19.073 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.EmployeeDao.idByEmployee       : ==>  Preparing: select id, name, birthday, salary, photo from `employee` where id = ?
+2021-08-10 09:58:19.073 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.EmployeeDao.idByEmployee       : ==> Parameters: 17(Integer)
+2021-08-10 09:58:19.074 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.EmployeeDao.idByEmployee       : <==      Total: 1
+2021-08-10 09:58:19.076 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.controller.UserController          : Employee{id=17, name='张三2', salary=122.33, birthday=Sat Dec 01 00:00:00 CST 2012, photo='20210809173402747.jpg'}
+2021-08-10 10:07:46.832  WARN 11804 --- [http-nio-9999-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/ems-thymeleaf?characterEncoding=UTF-8, version : 1.2.5, lastPacketReceivedIdleMillis : 567756
+2021-08-10 10:07:46.853 DEBUG 11804 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 10:07:46.853 DEBUG 11804 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 10:07:46.854 DEBUG 11804 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 10:08:15.570 DEBUG 11804 --- [http-nio-9999-exec-5] c.h.e.controller.UserController          : username:, password:
+2021-08-10 10:08:15.572 DEBUG 11804 --- [http-nio-9999-exec-5] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 10:08:15.572 DEBUG 11804 --- [http-nio-9999-exec-5] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: (String)
+2021-08-10 10:08:15.574 DEBUG 11804 --- [http-nio-9999-exec-5] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 10:08:18.256 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.controller.UserController          : username:, password:
+2021-08-10 10:08:18.258 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 10:08:18.258 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: (String)
+2021-08-10 10:08:18.259 DEBUG 11804 --- [http-nio-9999-exec-7] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 10:08:19.638 DEBUG 11804 --- [http-nio-9999-exec-10] c.h.e.controller.UserController          : username:, password:
+2021-08-10 10:08:19.639 DEBUG 11804 --- [http-nio-9999-exec-10] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 10:08:19.640 DEBUG 11804 --- [http-nio-9999-exec-10] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: (String)
+2021-08-10 10:08:19.641 DEBUG 11804 --- [http-nio-9999-exec-10] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 10:08:29.714 DEBUG 11804 --- [http-nio-9999-exec-3] c.h.e.controller.UserController          : username:, password:
+2021-08-10 10:08:29.715 DEBUG 11804 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 10:08:29.716 DEBUG 11804 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: (String)
+2021-08-10 10:08:29.717 DEBUG 11804 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 14:51:17.930  INFO 11804 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-08-10 14:51:17.946  INFO 11804 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

@@ -1,0 +1,80 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>更新员工信息</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<h3>更新员工信息：<span th:text="${param.msg}"></span></h3>
+<form th:action="@{/employee/update}" method="POST" enctype="multipart/form-data">
+
+    <table>
+
+        <tr>
+            <td valign="middle" align="right">
+                ID：
+            </td>
+            <td valign="middle" align="left">
+                <input type="text" class="inputgri" th:value="${employee.id}" disabled>
+            </td>
+        </tr>
+        <input type="text" name="id" th:value="${employee.id}" hidden>
+        <tr>
+            <td valign="middle" align="right">
+                姓名：
+            </td>
+            <td valign="middle" align="left">
+                <input type="text" class="inputgri" name="name" th:value="${employee.name}">
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle" align="right">
+                当前头像：
+            </td>
+            <td valign="middle" align="left">
+                <img width="60" th:src="@{/} + ${employee.photo}">
+            </td>
+            <input hidden name="photo" th:value="${employee.photo}"/>
+        </tr>
+
+        <tr>
+            <td valign="middle" align="right">
+                选择新头像：
+            </td>
+            <td valign="middle" align="left">
+                <input type="file" class="inputgri" name="img" width="">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="middle" align="right">
+                工资：
+            </td>
+            <td valign="middle" align="left">
+                <input type="text" class="inputgri" name="salary" th:value="${employee.salary}">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="middle" align="right">
+                生日：
+            </td>
+            <td valign="middle" align="left">
+                <input type="text" class="inputgri" name="birthday"
+                       th:value="${#dates.format(employee.birthday, 'yyyy/MM/dd')}"/>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        <input type="submit" class="button" value="更新"/>
+        <input type="button" class="button" value="返回列表" onclick="toList()"/>
+        <script>
+            function toList() {
+                location.href = "[[@{/employee/list}]]";
+            }
+        </script>
+    </p>
+</form>
+</body>
+</html>
