@@ -95,3 +95,116 @@
 2021-08-10 10:08:29.717 DEBUG 11804 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
 2021-08-10 14:51:17.930  INFO 11804 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2021-08-10 14:51:17.946  INFO 11804 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-08-10 15:02:09.520  INFO 9960 --- [restartedMain] c.h.e.EmsThymeleafApplication            : Starting EmsThymeleafApplication using Java 1.8.0_191 on DESKTOP-9S2DH3B with PID 9960 (C:\Users\hxsz\IdeaProjects\ems-thymeleaf\target\classes started by hxsz in C:\Users\hxsz\IdeaProjects\ems-thymeleaf)
+2021-08-10 15:02:09.524 DEBUG 9960 --- [restartedMain] c.h.e.EmsThymeleafApplication            : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-10 15:02:09.524  INFO 9960 --- [restartedMain] c.h.e.EmsThymeleafApplication            : No active profile set, falling back to default profiles: default
+2021-08-10 15:02:09.649  INFO 9960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-10 15:02:09.649  INFO 9960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-10 15:02:10.518  INFO 9960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2021-08-10 15:02:10.533  INFO 9960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 15:02:10.533  INFO 9960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-10 15:02:10.596  INFO 9960 --- [restartedMain] o.a.c.c.C.[.[.[/ems-thymeleaf]           : Initializing Spring embedded WebApplicationContext
+2021-08-10 15:02:10.596  INFO 9960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 946 ms
+2021-08-10 15:02:11.189  INFO 9960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-10 15:02:11.220  INFO 9960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/ems-thymeleaf'
+2021-08-10 15:02:11.220  INFO 9960 --- [restartedMain] c.h.e.EmsThymeleafApplication            : Started EmsThymeleafApplication in 2.287 seconds (JVM running for 3.424)
+2021-08-10 15:02:13.950  INFO 9960 --- [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/ems-thymeleaf]           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 15:02:13.950  INFO 9960 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 15:02:13.951  INFO 9960 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-10 15:02:19.266 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.controller.UserController          : username:test, password:111
+2021-08-10 15:02:19.304  INFO 9960 --- [http-nio-9999-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-08-10 15:02:19.671 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 15:02:19.690 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test(String)
+2021-08-10 15:02:19.708 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 15:02:24.904 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.controller.UserController          : username:test, password:123
+2021-08-10 15:02:24.906 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 15:02:24.906 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test(String)
+2021-08-10 15:02:24.907 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 15:02:24.919 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:24.919 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:24.921 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:02:37.553 DEBUG 9960 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:37.557 DEBUG 9960 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:37.562 DEBUG 9960 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:02:55.420 DEBUG 9960 --- [http-nio-9999-exec-1] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:55.421 DEBUG 9960 --- [http-nio-9999-exec-1] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:55.422 DEBUG 9960 --- [http-nio-9999-exec-1] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:02:56.077 DEBUG 9960 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:56.077 DEBUG 9960 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:56.079 DEBUG 9960 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:02:56.301 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:56.302 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:56.303 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:02:56.485 DEBUG 9960 --- [http-nio-9999-exec-10] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:56.485 DEBUG 9960 --- [http-nio-9999-exec-10] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:56.487 DEBUG 9960 --- [http-nio-9999-exec-10] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:02:56.676 DEBUG 9960 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:56.676 DEBUG 9960 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:56.678 DEBUG 9960 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:02:56.860 DEBUG 9960 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:02:56.860 DEBUG 9960 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:02:56.861 DEBUG 9960 --- [http-nio-9999-exec-5] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:03:09.174 DEBUG 9960 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:03:09.178 DEBUG 9960 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:03:09.180 DEBUG 9960 --- [http-nio-9999-exec-8] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:03:11.917 DEBUG 9960 --- [http-nio-9999-exec-1] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:03:11.917 DEBUG 9960 --- [http-nio-9999-exec-1] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:03:11.919 DEBUG 9960 --- [http-nio-9999-exec-1] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:03:12.092 DEBUG 9960 --- [http-nio-9999-exec-6] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:03:12.092 DEBUG 9960 --- [http-nio-9999-exec-6] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:03:12.094 DEBUG 9960 --- [http-nio-9999-exec-6] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:03:12.276 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:03:12.276 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:03:12.278 DEBUG 9960 --- [http-nio-9999-exec-7] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:03:12.452 DEBUG 9960 --- [http-nio-9999-exec-10] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:03:12.453 DEBUG 9960 --- [http-nio-9999-exec-10] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:03:12.454 DEBUG 9960 --- [http-nio-9999-exec-10] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 15:03:12.620 DEBUG 9960 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 15:03:12.621 DEBUG 9960 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 15:03:12.622 DEBUG 9960 --- [http-nio-9999-exec-4] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
+2021-08-10 16:31:52.125 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : code:
+2021-08-10 16:31:52.126 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : user.username:test,user.getRealname:fds,user.getPassword:,user.getGender:true
+2021-08-10 16:32:02.639 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.controller.UserController          : code:y354
+2021-08-10 16:32:02.639 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.controller.UserController          : user.username:test,user.getRealname:,user.getPassword:,user.getGender:true
+2021-08-10 16:32:02.662 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:32:02.663 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test(String)
+2021-08-10 16:32:02.664 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 16:32:59.428 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.controller.UserController          : code:v14u
+2021-08-10 16:32:59.429 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.controller.UserController          : user.username:test2,user.getRealname:fds3,user.getPassword:111,user.getGender:false
+2021-08-10 16:32:59.431 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:32:59.432 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test2(String)
+2021-08-10 16:32:59.433 DEBUG 9960 --- [http-nio-9999-exec-3] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 16:32:59.434 DEBUG 9960 --- [http-nio-9999-exec-3] com.hxh.emsthymeleaf.dao.UserDao.save    : ==>  Preparing: insert into `user` values(?, ?, ?, ?, ?)
+2021-08-10 16:32:59.434 DEBUG 9960 --- [http-nio-9999-exec-3] com.hxh.emsthymeleaf.dao.UserDao.save    : ==> Parameters: null, test2(String), fds3(String), 698d51a19d8a121ce581499d7b701668(String), false(Boolean)
+2021-08-10 16:32:59.436 DEBUG 9960 --- [http-nio-9999-exec-3] com.hxh.emsthymeleaf.dao.UserDao.save    : <==    Updates: 1
+2021-08-10 16:33:23.080 DEBUG 9960 --- [http-nio-9999-exec-2] c.h.e.controller.UserController          : username:test1, password:123
+2021-08-10 16:33:23.082 DEBUG 9960 --- [http-nio-9999-exec-2] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:33:23.082 DEBUG 9960 --- [http-nio-9999-exec-2] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test1(String)
+2021-08-10 16:33:23.083 DEBUG 9960 --- [http-nio-9999-exec-2] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 16:33:28.661 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.controller.UserController          : username:test1, password:111
+2021-08-10 16:33:28.662 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:33:28.663 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test1(String)
+2021-08-10 16:33:28.663 DEBUG 9960 --- [http-nio-9999-exec-9] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 16:33:40.137 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.controller.UserController          : username:test, password:111
+2021-08-10 16:33:40.139 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:33:40.139 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test(String)
+2021-08-10 16:33:40.140 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 16:33:44.598 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : username:test1, password:111
+2021-08-10 16:33:44.600 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:33:44.600 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test1(String)
+2021-08-10 16:33:44.601 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 16:33:57.592 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.controller.UserController          : username:test1, password:111
+2021-08-10 16:33:57.594 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:33:57.594 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test1(String)
+2021-08-10 16:33:57.595 DEBUG 9960 --- [http-nio-9999-exec-6] c.h.e.dao.UserDao.findByUserName         : <==      Total: 0
+2021-08-10 16:34:06.276 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.controller.UserController          : username:test2, password:112
+2021-08-10 16:34:06.277 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:34:06.277 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test2(String)
+2021-08-10 16:34:06.278 DEBUG 9960 --- [http-nio-9999-exec-8] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 16:34:11.570 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.controller.UserController          : username:test2, password:111
+2021-08-10 16:34:11.572 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.dao.UserDao.findByUserName         : ==>  Preparing: select id, username, realname, password, gender from `user` where username = ?
+2021-08-10 16:34:11.572 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.dao.UserDao.findByUserName         : ==> Parameters: test2(String)
+2021-08-10 16:34:11.573 DEBUG 9960 --- [http-nio-9999-exec-1] c.h.e.dao.UserDao.findByUserName         : <==      Total: 1
+2021-08-10 16:34:11.577 DEBUG 9960 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==>  Preparing: select id, name, photo, salary, birthday from `employee`
+2021-08-10 16:34:11.577 DEBUG 9960 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : ==> Parameters: 
+2021-08-10 16:34:11.579 DEBUG 9960 --- [http-nio-9999-exec-2] c.hxh.emsthymeleaf.dao.EmployeeDao.list  : <==      Total: 1
